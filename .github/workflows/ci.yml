@@ -1,0 +1,11 @@
+name: CI – Challenge Accessibility Tracker
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  run-challenge:
+    uses: doublebitsrl/ci-common/.github/workflows/test-challenge.yml@main
+    with:
+      challengeId: accessibility-tracker
