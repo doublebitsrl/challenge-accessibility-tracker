@@ -6,20 +6,23 @@ export async function hashHtml(html: string): Promise<string> {
     // Simulazione di un hash
     setTimeout(() => {
       resolve(`hash-${html}`);
-    }, 100);
+    }, 200);
   });
 }
 
 export function sendIfNew(html: string, context: any): void {
   // TODO
+  console.log("Sending new HTML:", html, "with context:", context);
 }
 
 export function observeDom(): void {
   // TODO
+  console.log("Observing DOM changes...");
 }
 
 export function trackUserActions(): void {
   // TODO
+  console.log("Tracking user actions...");
 }
 
 // Avvio automatico in browser
