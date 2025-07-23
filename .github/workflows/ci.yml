@@ -1,7 +1,7 @@
 name: CI – Challenge Accessibility Tracker
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize]
 
 jobs:
@@ -9,3 +9,5 @@ jobs:
     uses: doublebitsrl/ci-common/.github/workflows/test-challenge.yml@main
     with:
       challengeId: accessibility-tracker
+    secrets:
+      PRIVATE_REPO_PAT: ${{ secrets.PRIVATE_REPO_PAT }}
