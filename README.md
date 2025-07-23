@@ -17,7 +17,7 @@ A lightweight script that, when embedded on any page:
 ```
 accessibility-tracker-template/
 ├── src/
-│   └── tracker.js       ← implement your solution here
+│   └── main.js       ← implement your solution here
 ├── package.json         ← no tests here; CI will run hidden tests
 └── .github/
 └── workflows/
@@ -28,7 +28,7 @@ accessibility-tracker-template/
 
 ## 🎯 Your Tasks
 
-Open **`src/tracker.js`** and implement the following exported functions:
+Open **`src/main.js`** and implement the following exported functions:
 
 1. **`async hashHtml(html: string): Promise<string>`**
    - Compute a SHA-256 hash of `html`.
@@ -62,7 +62,7 @@ Open **`src/tracker.js`** and implement the following exported functions:
 ## 🔧 How to Submit
 
 1. **Fork** this repository.
-2. **Implement** the four functions in `src/tracker.js`.
+2. **Implement** the four functions in `src/main.js`.
 3. **Commit & push** your changes to your fork.
 4. **Open a Pull Request** back to this repo.
 
