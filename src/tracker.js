@@ -44,7 +44,17 @@ function initTracker() {
   trackUserActions();
 }
 
-// Esporta per i test
+/* *********
+  *
+  *  DO NOT modify the following lines after this comment, otherwise the tests will fail.
+  *  If you need to add code, do it before this comment.
+  *  If you need to remove code, do it before this comment.
+  *  If you need to change code, do it before this comment.
+  *  If you need to add comments, do it before this comment.
+  *  If you need to change comments, do it before this comment.
+  *
+********* */
+
 module.exports = {
   hashHtml,
   sendIfNew,
@@ -53,7 +63,6 @@ module.exports = {
   initTracker
 };
 
-// Auto-init in browser
 if (typeof window !== 'undefined') {
   initTracker();
 }

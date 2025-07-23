@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "echo \"No build needed\"",
-    "test:ci": "echo \"— tests are in hiring-tests repo —\""
+    "test:ci": "echo \"— You cannot run tests in this repo —\""
   },
   "devDependencies": {}
 }
