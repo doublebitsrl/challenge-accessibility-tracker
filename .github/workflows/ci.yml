@@ -13,3 +13,4 @@ jobs:
       challengeId: accessibility-tracker
     secrets:
       PRIVATE_REPO_PAT: ${{ secrets.PRIVATE_REPO_PAT }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
