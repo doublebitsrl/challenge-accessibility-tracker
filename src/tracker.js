@@ -7,11 +7,8 @@
 // 1. Async SHA-256 hashing
 ///////////////////////////////
 async function hashHtml(html) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(html);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  // TODO: implementa hash SHA-256 asincrono
+
 }
 
 ///////////////////////////////
