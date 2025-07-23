@@ -9,3 +9,5 @@ jobs:
     uses: doublebitsrl/ci-common/.github/workflows/test-challenge.yml@main
     with:
       challengeId: accessibility-tracker
+    secrets:
+      PRIVATE_REPO_PAT: ${{ secrets.PRIVATE_REPO_PAT }}
