@@ -11,6 +11,7 @@ async function hashHtml(html) {
   const data = encoder.encode(html);
   const hashBuffer = await crypto.subtle.digest('SHA-256', data);
   const hashArray = Array.from(new Uint8Array(hashBuffer));
+  console.log('Hash computed:', hashArray);
   return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
@@ -21,6 +22,7 @@ const sent = new Set();
 function sendIfNew(html, context) {
   // TODO: usa hashHtml(html) per deduplicare
   // se è nuovo, invia via fetch o sendBeacon a /api/accessibility
+  console.log('Sending:', html, context);
 }
 
 ///////////////////////////////
@@ -29,6 +31,7 @@ function sendIfNew(html, context) {
 function observeDom() {
   // TODO: instanzia MutationObserver su document.body
   // per ogni nodo aggiunto chiama sendIfNew(node.outerHTML, { type: 'mutation' })
+  console.log('Observing DOM mutations...');
 }
 
 ///////////////////////////////
@@ -37,6 +40,7 @@ function observeDom() {
 function trackUserActions() {
   // TODO: document.addEventListener su 'click','focusin','input','keydown' (Tab)
   // invia outerHTML del target con sendIfNew
+  console.log('Tracking user actions...');
 }
 
 ///////////////////////////////
