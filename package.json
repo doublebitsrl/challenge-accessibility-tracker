@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "tsc",
-    "test:ci": "echo \"No tests here – usar CI common\""
+    "build": "echo \"No build needed\"",
+    "test:ci": "echo \"— tests are in hiring-tests repo —\""
   },
-  "devDependencies": {
-    "typescript": "^5.0.0"
-  }
+  "devDependencies": {}
 }
