@@ -12,6 +12,7 @@ async function hashHtml(html) {
   const hashBuffer = await crypto.subtle.digest('SHA-256', data);
   const hashArray = Array.from(new Uint8Array(hashBuffer));
   console.log('Hash computed:', hashArray);
+  console.log("Updated hashHtml function");
   return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
@@ -23,6 +24,7 @@ function sendIfNew(html, context) {
   // TODO: usa hashHtml(html) per deduplicare
   // se è nuovo, invia via fetch o sendBeacon a /api/accessibility
   console.log('Sending:', html, context);
+
 }
 
 ///////////////////////////////
