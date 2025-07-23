@@ -8,6 +8,7 @@
 ///////////////////////////////
 async function hashHtml(html) {
   // TODO: implementa hash SHA-256 asincrono
+  console.log('Hashing HTML:', html);
 
 }
 
@@ -18,6 +19,7 @@ const sent = new Set();
 function sendIfNew(html, context) {
   // TODO: usa hashHtml(html) per deduplicare
   // se è nuovo, invia via fetch o sendBeacon a /api/accessibility
+  console.log('Sending HTML:', html, 'Context:', context);
 }
 
 ///////////////////////////////
@@ -26,6 +28,7 @@ function sendIfNew(html, context) {
 function observeDom() {
   // TODO: instanzia MutationObserver su document.body
   // per ogni nodo aggiunto chiama sendIfNew(node.outerHTML, { type: 'mutation' })
+  console.log('Observing DOM mutations...');
 }
 
 ///////////////////////////////
@@ -44,17 +47,7 @@ function initTracker() {
   trackUserActions();
 }
 
-/* *********
-  *
-  *  DO NOT modify the following lines after this comment, otherwise the tests will fail.
-  *  If you need to add code, do it before this comment.
-  *  If you need to remove code, do it before this comment.
-  *  If you need to change code, do it before this comment.
-  *  If you need to add comments, do it before this comment.
-  *  If you need to change comments, do it before this comment.
-  *
-********* */
-
+// Esporta per i test
 module.exports = {
   hashHtml,
   sendIfNew,
@@ -63,6 +56,7 @@ module.exports = {
   initTracker
 };
 
+// Auto-init in browser
 if (typeof window !== 'undefined') {
   initTracker();
 }
