@@ -10,7 +10,7 @@ jobs:
   run-challenge:
     uses: doublebitsrl/ci-common/.github/workflows/test-challenge.yml@main
     with:
-      challengeId: accessibility-tracker
+      challengeId: ${{ github.event.repository.name }}
     secrets:
       PRIVATE_REPO_PAT: ${{ secrets.PRIVATE_REPO_PAT }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
